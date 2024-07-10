@@ -17,30 +17,7 @@
 
 
 
-.heading-primary {
-  color: $color-primary-white;
-  text-transform: uppercase;
-  display: block;
-  backface-visibility: hidden; 
-    &--main {
-  display: block;
-  font-size: 6rem;
-  font-weight: 400;
-  letter-spacing: 3.5rem;
-  text-align: center;
-  animation-name: moveInLeft;
-  animation-duration: 1s;
-  animation-timing-function: ease-in; }
 
-    &--sub {
-  display: block;
-  font-size: 2rem;
-  font-weight: 7rem;
-  letter-spacing: 1.75rem;
-  animation: moveInRight 1s ease-in;
-  margin-bottom: 6rem; }
-   
-}
 
 
 

@@ -189,7 +189,10 @@ body {
 
 @media only screen and (max-width: 37.5em) {
   .heading-secondary {
-    letter-spacing: .5rem; } }
+    letter-spacing: .2rem; } }
+
+.u-center-text {
+  text-align: center; }
 
 .section-about {
   background-color: #f7f7f7;

@@ -5,8 +5,10 @@
     text-align: center;
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba($color-primary-black, .15);
-    transition: all .2s;
-  
+    transition: all .4s;
+    transform: skewY(0deg);
+
+    
       &__icon {
          font-size: 6rem;
          margin-bottom: .5rem;
@@ -15,7 +17,6 @@
          -webkit-background-clip: text;
          background-clip: text;
          color: transparent;
-         transition: all .2s;
       }
 
 

@@ -109,7 +109,10 @@ body {
 .u-margin-bottom-big {
   margin-bottom: 8rem; }
 
-.btn:link, .btn:visited {
+.u-margin-top-big {
+  margin-top: 8rem; }
+
+.btn, .btn:link, .btn:visited {
   text-decoration: none;
   text-transform: uppercase;
   padding: 1.5rem 4rem;
@@ -122,6 +125,9 @@ body {
 .btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
 
 .btn:active {
   transform: translateY(-1px);
@@ -131,6 +137,16 @@ body {
   background-color: #fff;
   color: #777;
   font-size: small; }
+  .btn--white::after {
+    background-color: #fff; }
+
+.btn--green {
+  background-color: #55c57a;
+  color: #fff;
+  font-size: small;
+  transition: all 0.6s ease; }
+  .btn--green::after {
+    background-color: #55c57a; }
 
 .btn::after {
   content: '';
@@ -141,10 +157,15 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 10rem;
-  background-color: #fff;
-  transition: all 0.2s;
   z-index: -1;
   transition: all .4s; }
+
+.btn-green:hover::after {
+  background-color: #55c57a; }
+
+.btn--animated {
+  animation: moveInBottom .5s ease .75s;
+  animation-fill-mode: backwards; }
 
 .btn-white:hover::after {
   background-color: #fff; }
@@ -152,11 +173,6 @@ body {
 .btn:hover::after {
   transform: scaleX(1.4) scaleY(1.6);
   opacity: 0; }
-
-.btn--animated {
-  animation: moveInBottom .5s ease-out .75s;
-  transition: all .2s;
-  animation-fill-mode: backwards; }
 
 .btn-text:link, .btn-text:visited {
   color: #55c57a;
@@ -246,6 +262,10 @@ body {
     box-decoration-break: clone; }
     .card__heading-span--1 {
       background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85)); }
+    .card__heading-span--2 {
+      background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.85), rgba(40, 180, 133, 0.85)); }
+    .card__heading-span--3 {
+      background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.85), rgba(86, 67, 250, 0.85)); }
   .card__details {
     padding: 3rem; }
     .card__details ul {

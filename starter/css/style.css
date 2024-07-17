@@ -380,8 +380,10 @@ body {
   border: none;
   border-bottom: 3px solid transparent;
   transition: all .2s;
-  width: 100%;
+  width: 90%;
   display: block; }
+  .form__input::-webkit-input-placeholder {
+    color: #999; }
 
 .form__input:focus {
   outline: none;

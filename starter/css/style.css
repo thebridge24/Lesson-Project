@@ -368,6 +368,15 @@ body {
   .feature-box:hover {
     transform: translateY(-1.5rem) scale(1.03); }
 
+.form__input {
+  font-size: 1.5rem;
+  padding: 1.5rem 2rem;
+  border-radius: 2px;
+  border: none; }
+
+.form__label {
+  color: green; }
+
 .story {
   width: 75%;
   margin: 0 auto;

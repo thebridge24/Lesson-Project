@@ -1,13 +1,14 @@
 .story {
     width: 75%;
-    background-color: $color-primary-white;
     margin: 0 auto;
+    background-color:rgba($color-primary-white, 0.6) ;
     box-shadow: 0 3rem 6rem rgba($color-primary-black, 0.1);
     border-radius: 3px;
     padding: 6rem; 
     padding-left: 9rem;
     font-size: $default-font-size;
     transform: skewX(-12deg);
+
 
     &__shape {
         width: 15rem;

@@ -15,24 +15,47 @@
         transition: all .2s;
         width: 90%;
         display: block;
-        
+        transition: all .3s;
+
         &::-webkit-input-placeholder {
         color: $color-grey-dark-2;
     }
-    }
 
-    &__input:focus {
+    &:focus {
         outline: none;
         box-shadow: 0 1rem 2rem rgba($color-primary-black, .1);
         border-bottom: 3px solid $color-primary;
         
         &:invalid {
-            border-bottom: 3px solid $color-primary-red;
+            border-bottom: 3px solid $color-secondary-light-2;
         }
     }
-    
+
+    }
 
     &__label {
         font-size: 1.2rem;
+        font-weight: 700;
+        margin-left: 2rem;
+        margin-top: .7rem;
+        display: block;
+        transition: all .3s;
+    }
+    &__input:placeholder-shown + &__label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-3rem);
+
+    }
+    &__error {
+        font-size: 1rem;
+        color: $color-secondary-light-2;
+        margin-top:.5rem;
+    }
+
+    &__success {
+        font-size: 1rem;
+        color: $color-primary;
+        margin-top:.5rem;
     }
 } 

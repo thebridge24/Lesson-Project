@@ -5,8 +5,39 @@
     top: 0;
     left: 0;
     z-index: 9999;
-    background-color: rgba($color-primary-black, .8);
+    background-color: rgba($color-primary-black, .4);
+    opacity: 0;
+    backdrop-filter: blur(20px);
+    visibility: hidden;
+    transition: all.3s;
+
+    &:target {
+        opacity: 1;
+        visibility: visible;
+        transition: all.3s ease-in-out;
+    }
+    &__close {
+
+        &:link,
+        &:visited { 
+
+        position: absolute;
+        top: 1rem;
+        right: 3rem;
+        cursor: pointer;
+        font-size: 4rem;
+        color: $color-primary-black;
+        transition: color.2s;
+        text-decoration: none;   
+        }
+    }
     
+    &__close:hover {
+        color: $color-primary;
+        transition: color .2s;
+    }
+
+
     &__content{
         @include absCenter;
 

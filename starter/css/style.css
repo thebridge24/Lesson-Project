@@ -480,7 +480,16 @@ body {
     background-color: #fff;
     box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
     border-radius: 3px;
-    overflow: hidden; }
+    display: table; }
+  .popup__left {
+    width: 33.33333%;
+    float: left; }
+  .popup__right {
+    width: 66.666666%;
+    float: left; }
+  .popup__img {
+    display: block;
+    width: 100%; }
 
 .story {
   width: 75%;

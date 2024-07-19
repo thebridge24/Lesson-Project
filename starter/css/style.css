@@ -1,3 +1,20 @@
+/*
+    0 - 600px:       Phone
+    600 - 900px:     Tablet portrait
+    900 - 1200px:    Tablet landscape
+    [1200 - 1800] is where our normal styles apply
+    1800px + :       Big desktop
+
+$breakpoint arguement choices:  
+    - phone
+    - tablet
+    - tablet-land
+    - big-desktop
+
+    ORDER: Base + typography > general layout + grid > page layout > components
+    
+    1em - 16px
+*/
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -35,6 +52,15 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   font-family: 'Lato', sans-serif;
@@ -44,6 +70,10 @@ body {
   color: #777;
   padding: 2.5rem;
   box-sizing: border-box; }
+  @media (max-width: 56.25em) {
+    body {
+      font-size: 50%;
+      padding: 0; } }
 
 * {
   -webkit-user-select: none;
@@ -65,13 +95,20 @@ body {
     animation-name: moveInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-in; }
+    @media (max-width: 37.5em) {
+      .heading-primary--main {
+        font-size: 5rem;
+        letter-spacing: 1.5rem; } }
   .heading-primary--sub {
     display: block;
     font-size: 2rem;
-    font-weight: 7rem;
+    font-weight: 400;
     letter-spacing: 1.75rem;
     animation: moveInRight 1s ease-in;
     margin-bottom: 6rem; }
+    @media (max-width: 37.5em) {
+      .heading-primary--sub {
+        letter-spacing: .5rem; } }
 
 .heading-secondary {
   font-size: 3rem;
@@ -84,14 +121,16 @@ body {
   color: transparent;
   transition: all .2s;
   animation: moveInRight 1s ease-out; }
+  @media (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 2.5rem; } }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2rem; } }
   .heading-secondary:hover {
     transform: skewY(-2deg) skewX(-15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
     letter-spacing: .1rem; }
-
-@media only screen and (max-width: 37.5em) {
-  .heading-secondary {
-    letter-spacing: .2rem; } }
 
 .heading-tertiary {
   font-size: 1.6rem;

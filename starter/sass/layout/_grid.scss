@@ -14,7 +14,7 @@
 
     @include respond (tab-port) {
         max-width: 50rem;
-        padding: 0 3rem;
+        padding: 0 2rem;
 
     }
      
@@ -22,7 +22,7 @@
 
     [class^="col-"] {
         float: left;
-        
+
         &:not(:last-child) {
             margin-right: $gutter-horizontal;
 

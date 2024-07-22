@@ -8,6 +8,9 @@
     transition: all .4s;
     transform: skewY(0deg);
 
+    @include respond (tab-port){
+      padding: 2rem;
+    }
     
       &__icon {
          font-size: 6rem;
@@ -17,6 +20,10 @@
          -webkit-background-clip: text;
          background-clip: text;
          color: transparent;
+
+         @include respond (tab-port){
+          margin-bottom: 0;
+        }
       }
 
 

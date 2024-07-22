@@ -9,6 +9,17 @@
     font-size: $default-font-size;
     transform: skewX(-12deg);
 
+    @include respond (tab-port) {
+        width: 100%;
+        padding: 4rem;
+        padding-left: 6rem;
+    }
+
+    @include respond (phone) {
+        width: 100%;
+        transform: skewX(0);
+        border-radius: 5px;
+    }
 
     &__shape {
         width: 15rem;
@@ -20,6 +31,11 @@
         clip-path: circle(50% at 50% 50%);
         transform: translateX(-3rem) skew(12deg);
         position: relative;
+
+        @include respond (phone) {
+            transform: translateX(-3rem) skewX(0);
+        }
+    
     }
 
     &__img {
@@ -27,10 +43,23 @@
         transform: translateX(-4rem) scale(1.4);
         backface-visibility: hidden;
         transition: all.5s; 
+
+        @include respond (phone) {
+            transform: translateX(-4rem) scale(1);
+            -webkit-filter: blur(0px) brightness(100%);      
+            filter: blur(0px) brightness(100%);
+        }
+
         }
 
     &__text {
         transform: skewX(12deg);
+
+        @include respond (phone) {
+            transform: skewX(0);
+            -webkit-backface-visibility: hidden;
+            margin-top: 18rem;
+        }
         }
     &__caption {
         color: $color-primary-white;
@@ -45,6 +74,10 @@
         transition: all .5s;
         backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
+
+        @include respond (phone) {
+
+        }
         }
 
     &:hover &__caption {
@@ -52,6 +85,8 @@
         transition: all .8s;
         -webkit-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
+
+
         }
     
         &:hover &__img {

@@ -11,7 +11,15 @@
     visibility: hidden;
     transition: all.3s;
 
+    @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        background-color: rgba($color-primary-black, .3);
+    }
 
+    @include respond (tab-port) {
+        height: 100%;
+    }
     &__content{
         @include absCenter;
 
@@ -24,17 +32,31 @@
         opacity: 0;
         transform: translate(-50%, -50%) scale(.25);
         transition: all .5s .2;
+
+        @include respond (tab-port){
+            width: 90%;
+            display: block;
+        }
     }
 
     &__left {
         width: 33.33333%;
         display: table-cell;
+
+        @include respond (tab-port) {
+            display: flex;
+            width: 100%;
+        }
     }
     &__right {
        width: 66.666667%;
        display: table-cell;
        vertical-align: middle;
        padding: 3rem 5rem;
+
+       @include respond (phone) {
+        padding: 1rem 2rem;
+    }
     }
     &__img {
         display: block;
@@ -56,6 +78,13 @@
         -ms-hyphens: auto;
         -webkit-hyphens: auto;
         hyphens: auto;
+
+        @include respond (tab-port) {
+            display: block;
+            width: 100%;
+            font-size: 1rem;
+
+        }
 
     }
 

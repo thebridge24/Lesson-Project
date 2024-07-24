@@ -29,6 +29,7 @@ body {
   color: $color-primary-grey-dark;
   padding: 2.5rem;
   box-sizing: border-box; 
+  scroll-behavior: smooth;
 
   @include respond(tab-port) {
     font-size: 50%; // 1rem = 8px
